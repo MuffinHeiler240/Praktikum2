@@ -1,0 +1,3 @@
+C:/Users/jgreive/CLionProjects/Praktikum2/cmake-build-debug/CMakeFiles/Praktikum2.dir
+C:/Users/jgreive/CLionProjects/Praktikum2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jgreive/CLionProjects/Praktikum2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
