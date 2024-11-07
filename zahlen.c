@@ -64,9 +64,8 @@ int str2int (char str []) {
         if (str[1]=='x'||str[1]=='X') {
             return hex2int(str);
         }
-        else {
-            return okt2int(str);
-        }
+        return okt2int(str);
+
     }
     return dez2int(str);
 }
