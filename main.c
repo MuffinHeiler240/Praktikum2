@@ -31,5 +31,7 @@ int main(int argc, char** argv) {
 
     /* Zahl in unterschiedlichen Basen ausgeben */
     printf ("dezi: %d binaer:%s oktal:0%o hexa:0x%X \n",zahl,puffer,zahl,zahl);
+
+    clear('0',puffer);
     return EXIT_SUCCESS;
 }

@@ -1,7 +1,8 @@
 void clear(char c, char str []) {
-    if(c == '\n') {
-        str[0] = '\0';
-    }
+    int i = 0;
+    for (; i < 8; i++) {
+       str[i] = c;
+   }
 }
 
 /* Konvertierung der dezimalen Eingabe in einen ganzzahligen Wert (Integer) */
@@ -55,6 +56,7 @@ int hex2int (char str []) {
 
 /* Konvertierung der Zeichenkette in einen Integer */
 int str2int (char str []) {
+
     /* Überprüfen, ob die Zeichenkette nicht leer ist */
     if (str[0] == '\0') {
         return -1;
@@ -74,7 +76,8 @@ int str2int (char str []) {
 void int2Binaer(int i, char str []) {
     int index = 0;
     int j;
-    int rest;
+
+    clear('0',str);
 
     /* Der Fall, in dem die Dezimalzahl gleich 0 ist */
     if (i == 0) {
@@ -90,14 +93,9 @@ void int2Binaer(int i, char str []) {
         str[index++] = (i % 2) + '0';
         i /= 2;
     }
-
-    /* Berücksichtigung der korrekten Ausgabe mit 8 Stellen */
-    rest = 8 - index;
-
-    for (j = rest - 1; j >= 0; j--) {
+    while (index < 8) {
         str[index++] = '0';
     }
-
     str[index] = '\0';
 
     /* Inverse Ausgabe */
