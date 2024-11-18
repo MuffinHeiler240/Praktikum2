@@ -1,6 +1,8 @@
+#include "zahlen.h"
+
 void clear(char c, char str []) {
     int i = 0;
-    for (; i < 8; i++) {
+    for (; i < DIGITS; i++) {
        str[i] = c;
    }
 }
@@ -74,34 +76,22 @@ int str2int (char str []) {
 
 /* Umwandlung eines Integers in eine binäre Zeichenkette */
 void int2Binaer(int i, char str []) {
-    int index = 0;
     int j;
 
     clear('0',str);
 
     /* Der Fall, in dem die Dezimalzahl gleich 0 ist */
     if (i == 0) {
-        for (j = 0; j <= 7; j++) {
-            str[index++] = '0';
-        }
-        str[index] = '\0';
         return;
     }
 
-    /* Divisionsalgorithmus */
-    while (i > 0) {
-        str[index++] = (i % 2) + '0';
-        i /= 2;
-    }
-    while (index < 8) {
-        str[index++] = '0';
-    }
-    str[index] = '\0';
-
-    /* Inverse Ausgabe */
-    for (j = 0; j < index / 2; j++) {
-        char temp = str[j];
-        str[j] = str[index - 1 - j];
-        str[index - 1 - j] = temp;
+    /* Divisionsalgorithmus mit der invertierten Speicherung */
+    for (j = DIGITS-1; j >= 0; j--) {
+        if(i > 0) {
+            str[j] = (i % 2) + '0';
+            i /= 2;
+        } else {
+            return;
+        }
     }
 }
