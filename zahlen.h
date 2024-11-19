@@ -1,4 +1,6 @@
 /* Verwende zur Darstellung maximal 8 DIGITS lange Zeichenketten */
+#ifndef ZAHLEN_H
+#define ZAHLEN_H
 #define DIGITS 8
 
 /* Groesste erlaubte Zahl mit DIGITS Stellen */
@@ -12,3 +14,5 @@ int str2int (char str []) ;
 
 /* Schreibt die Binaerdarstellung der Ganzzahl i in die Zeichenkette str */
 void int2Binaer(int i, char str []) ;
+
+#endif // ZAHLEN_H
