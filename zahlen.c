@@ -5,6 +5,7 @@ void clear(char c, char str []) {
     for (; i < DIGITS; i++) {
        str[i] = c;
    }
+
     str[DIGITS] = '\0';
 }
 
