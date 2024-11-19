@@ -49,9 +49,9 @@ int hex2int (char str []) {
         if(str[i] >= '0' && str[i] <= '9') {
             result = result * 16 + (str[i] - '0');
         }if(str[i] >= 'A' && str[i] <= 'F') {
-            result = result * 16 + (str[i] - '7');
+            result = result * 16 + (str[i] - 'A' + 10);
         }if(str[i] >= 'a' && str[i] <= 'f') {
-            result = result * 16 + (str[i] - 'W');
+            result = result * 16 + (str[i] - 'a' + 10);
         }
         i++;
     }
